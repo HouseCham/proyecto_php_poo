@@ -2,7 +2,7 @@
     <div id="logo">
         <img src="assets/imgs/logo.png" alt="t-shirt" id="logo_img" />
         <a href="index.php">
-            Tienda de camisetas
+            Coolest
         </a>
     </div>
 </header>

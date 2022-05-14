@@ -1,6 +1,79 @@
-#logo_img{
-    width: 150px;
+:root{
+    --bg: #dddddd;
+    --a_color: #5cbac7;
+    --a_hover: #29a3db;
+
+    /* HEADER */
+    --header_bg: #F0F0F0;
+    --title: #fa6767;
 }
+
+/* GENERALES */
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background: var(--bg);
+}
+a{
+    color: var(--a_color);
+    text-decoration: none;
+}
+a:visited{
+    color: var(--a_color);
+}
+a:hover{
+    color: var(--a_hover);
+}
+#main_container{
+    width: 80%;
+    margin: 0px auto;
+    box-shadow: 0px 0px 10px gray;
+    background: var(--bg);
+}
+
+/* Header */
+#header{
+    height: 145px;
+    background: var(--header_bg);
+}
+#logo_img{
+    float: left;
+    height: 30px;
+}
+#logo{
+    padding: 1rem;
+    margin-left: 1rem;
+    float: left;
+}
+#logo a{
+    float: left;
+    font-size: 2rem;
+    letter-spacing: 4px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+    color: var(--title);
+    font-weight: 600;
+    margin-left: 1rem;
+    text-shadow: 0px 2px 1px #222222;
+    transition: all 300ms;
+}
+#logo a:hover{
+    text-shadow: 0px 2px 1px #222222, 0px 0px 4px var(--title);
+}
+
 .product_img{
     width: 100px;
+}
+
+/* Menu */
+
+@media only screen and (min-width: 1024px){
+    #logo_img{
+        height: 53px;
+    }
+    #logo a{
+        font-size: 3rem;
+    }
 }
