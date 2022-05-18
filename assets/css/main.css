@@ -106,11 +106,11 @@ a:hover{
     margin: 0px auto;
     overflow: hidden;
     background: white;
+    height: 100%;
 }
-
 /* ==================== Lateral ==================== */
 #lateral{
-    width: 25%;
+    width: 22%;
     min-height: 500px;
     float: left;
     margin-top: 20px;
@@ -169,7 +169,8 @@ input[type="email"]:focus {
     border: 1px solid #1579b5;
     color: black;
 }
-.submit{
+.submit,
+.button {
     display: block;
     border-radius: 2px;
     width: auto;
@@ -183,9 +184,51 @@ input[type="email"]:focus {
     margin-left: auto;
     margin-right: auto;
 }
-.submit:hover{
-    background: #2162a7;
+.button{
+    width: 60%;
 }
+.submit:hover, 
+.button:hover {
+    background: #2162a7;
+    color: white;
+}
+
+/* ==================== Main ==================== */
+#central{
+    width: 75%;
+    float: right;
+    border-left: 1px solid #ccc;
+    box-shadow: -5px -1px 5px #ddd;
+    background: white;
+    min-height: 500px;
+}
+#central h1{
+    font-size: 28px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding-bottom: 10px;
+    text-align: center;
+    border-bottom: 2px solid #ccc;
+}
+
+/* ==================== Products ==================== */
+.product{
+    width: 30%;
+    margin-left: 10px;
+    margin-right: 10px;
+    float: left;
+    border-right: 1px solid #ccc;
+    text-align: center;
+}
+.product h2{
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.product img{
+    width: 100px;
+    margin-bottom: 10px;
+}
+
 @media only screen and (min-width: 1024px){
     #logo_img{
         height: 53px;
