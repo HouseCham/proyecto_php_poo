@@ -1,6 +1,10 @@
 <div id="content">
+    
     <!-- Lateral Navbar -->
-    <?php include_once "navbar.php"; ?>
+    <div id="content">
+        <?php include_once "navbar.php"; ?>
+    </div>
+
     <!-- Main -->
     <div id="main">
         <?php include_once "main_product.php"; ?>
