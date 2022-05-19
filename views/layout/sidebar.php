@@ -15,3 +15,5 @@
         </ul>
     </div>
 </aside>
+
+<div id="central">

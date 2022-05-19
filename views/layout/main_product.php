@@ -1,4 +1,4 @@
-<div id="central">
+
     <h1>Productos destacados</h1>
     
     <div class="product">
