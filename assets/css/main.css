@@ -239,6 +239,14 @@ input[type="email"]:focus {
     background: #222;
 }
 
+/* ==================== Alerts ==================== */
+.alert_green{
+    color: green;
+}
+.alert_red{
+    color: red;
+}
+
 @media only screen and (min-width: 1024px){
     #logo_img{
         height: 53px;
