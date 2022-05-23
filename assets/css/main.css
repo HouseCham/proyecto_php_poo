@@ -255,3 +255,24 @@ input[type="email"]:focus {
         font-size: 3rem;
     }
 }
+
+/*================================= Category table =====================================*/
+#category_table{
+    width: 30%;
+    margin-left: 35%;
+    padding: 1rem;
+    text-align: center;
+}
+#category_table th{
+    color: white;
+    background: #22677e;
+}
+.category_btn{
+    width: 20%;
+    border-radius: 5px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+.category_btn:visited{
+    color: white;
+}

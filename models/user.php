@@ -10,8 +10,7 @@ class User{
     private $image;
     private $db;
 
-    public function __construct()
-    {
+    public function __construct(){
         $this->db = Database::connect();
     }
 

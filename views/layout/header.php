@@ -14,31 +14,24 @@
         <header id="header">
             <div id="logo">
                 <img src="<?= base_url ?>assets/imgs/logo.png" alt="t-shirt" id="logo_img" />
-                <a href="index.php">
+                <a href="<?= base_url ?>">
                     Coolest
                 </a>
             </div>
         </header>
+
+        <?php $categories = Utils::showCategories(); ?>
+
         <nav id="menu">
             <ul>
                 <li>
-                    <a href="#">Inicio</a>
+                    <a href="<?= base_url ?>">Inicio</a>
                 </li>
-                <li>
-                    <a href="#">Categoria 1</a>
-                </li>
-                <li>
-                    <a href="#">Categoria 2</a>
-                </li>
-                <li>
-                    <a href="#">Categoria 3</a>
-                </li>
-                <li>
-                    <a href="#">Categoria 4</a>
-                </li>
-                <li>
-                    <a href="#">Categoria 5</a>
-                </li>
+                <?php while ($cat = $categories->fetch_object()) : ?>
+                    <li>
+                        <a href="#"><?= $cat->category ?></a>
+                    </li>
+                <?php endwhile; ?>
             </ul>
         </nav>
         <div id="content">

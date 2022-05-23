@@ -9,12 +9,13 @@
                 <input type="password" name="password" class="input" />
                 <input type="submit" value="Login" class="submit" />
             </form>
+            <li><a href="<?= base_url ?>user/register">Registrarse</a></li>
         <?php else : ?>
             <h3>Welcome <?= $_SESSION['userLogged']->name ?></h3>
         <?php endif; ?>
         <ul>
             <?php if (isset($_SESSION['admin'])) : ?>
-                <li><a href="#">Gestionar categorias</a></li>
+                <li><a href="<?=base_url?>category/index">Gestionar categorias</a></li>
                 <li><a href="#">Gestionar productos</a></li>
                 <li><a href="#">Gestionar pedidos</a></li>
             <?php endif; ?>
