@@ -28,7 +28,7 @@ class userController
                 $user->setName($name);
                 $user->setLastname($lastname);
                 $user->setEmail($email);
-                $user->setPassword($password);
+                $user->setPassword($user->encryptPassword($password));
 
                 $save = $user->save();
 
@@ -44,5 +44,37 @@ class userController
             $_SESSION['register'] = "failed";
         }
         header("Location:" . base_url . "user/register");
+    }
+
+    public function login(){
+        if(isset($_POST)){
+            // Db consult
+            $user = new User();
+            $user->setEmail($_POST['email']);
+            $user->setPassword($_POST['password']);
+
+            $identity = $user->login();
+
+            if($identity && is_object($identity)){
+                $_SESSION['userLogged'] = $identity;
+                if($identity->role == 'admin'){
+                    $_SESSION['admin'] = true;
+                }
+            } else{
+                $_SESSION['error_login'] = "Failed to loggin"; 
+            }
+        }
+
+        header("Location:".base_url);
+    }
+
+    public function logout(){
+        if(isset($_SESSION['userLogged'])){
+            unset($_SESSION['userLogged']);
+        }
+        if(isset($_SESSION['admin'])){
+            unset($_SESSION['admin']);
+        }
+        header("Location:".base_url);
     }
 }
