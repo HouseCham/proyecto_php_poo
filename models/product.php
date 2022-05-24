@@ -69,6 +69,17 @@ class Product{
         $products = $this->db->query("SELECT * FROM products ORDER BY id DESC;");
         return $products;
     }
+    public function getByCategory(){
+        $products = $this->db->query("SELECT p.*, c.category FROM products p "
+                                    ."INNER JOIN categories c ON c.id = p.category_id "
+                                    ."WHERE p.category_id = {$this->getCategoryId()} "
+                                    ."ORDER BY id DESC;");
+        return $products;
+    }
+    public function getRandom($limit){
+        $products = $this->db->query("SELECT * FROM products ORDER BY RAND() LIMIT $limit;");
+        return $products;
+    }
     public function getOne(){
         $product = $this->db->query("SELECT * FROM products WHERE id={$this->getId()};");
         return $product->fetch_object();

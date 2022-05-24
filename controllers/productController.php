@@ -5,6 +5,8 @@ class productController
 {
     public function index()
     {
+        $product = new Product();
+        $products = $product->getRandom(6);
         require_once 'views/layout/main_product.php';
     }
 
@@ -58,10 +60,10 @@ class productController
                     $product->setImage($filename);
                 }
 
-                if(isset($_GET['id'])){
+                if (isset($_GET['id'])) {
                     $product->setId($_GET['id']);
                     $save = $product->edit();
-                } else{
+                } else {
                     $save = $product->save();
                 }
 
@@ -70,7 +72,6 @@ class productController
                 } else {
                     $_SESSION['product'] = "failed";
                 }
-
             } else {
                 $_SESSION['product'] = "failed";
             }
