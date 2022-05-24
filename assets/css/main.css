@@ -67,7 +67,185 @@ a:hover{
     width: 100px;
 }
 
-/* Menu */
+/* ============================= Menu ============================= */
+#menu{
+    clear: both;
+    background: #222222;
+    color: white;
+    height: 55px;
+    border-bottom: 4px solid #01B1EA;
+}
+#menu ul{
+    list-style: none;
+    text-decoration: none;
+    margin: 0px auto;
+    margin-left: 25px;
+}
+#menu ul li{
+    line-height: 55px;
+    float: left;
+    border-right: 1px solid #363636;
+}
+#menu a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding-left: 12px;
+    padding-right: 12px;
+    transition: all 300ms;
+}
+#menu a:first-child{
+    border-left: 1px solid #363636;
+}
+#menu a:hover{
+    background: #01B1EA;
+}
+
+/* ==================== Content ==================== */
+#conten{
+    margin: 0px auto;
+    overflow: hidden;
+    background: white;
+    height: 100%;
+}
+/* ==================== Lateral ==================== */
+#lateral{
+    width: 22%;
+    min-height: 500px;
+    float: left;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+#lateral .block_aside{
+    display: block;
+    width: 90%;
+    margin: 5px auto;
+    padding: 10px;
+    background: white;
+    border-radius: 5px;
+}
+#lateral h3{
+    display: block;
+    color: #222;
+    width: 100%;
+    text-align: center;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    background: #d1d1d1;
+    border-bottom: 2px solid;
+}
+#lateral ul{
+    margin-top: 10px;
+}
+#lateral ul li{
+    list-style: square;
+    margin-left: 20px;
+}
+
+/* ==================== Forms ==================== */
+label{
+    display: block;
+    width: 95%;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    margin-left: 10%;
+}
+.input, select{
+    border: 1px solid #C9C9C9;
+    box-shadow: 0px 0px 2px #ccc inset;
+    background: white;
+    padding: 2px;
+    color: gray;
+    transition: all 300ms;
+    width: 80%;
+    margin-left: 10%;
+}
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus {
+    border: 1px solid #1579b5;
+    color: black;
+}
+.submit,
+.button {
+    display: block;
+    border-radius: 2px;
+    width: auto;
+    padding: 5px;
+    color: white;
+    background: #2979CD;
+    border-color: #2979CD;
+    cursor: pointer;
+    transition: all 300ms;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.button{
+    width: 60%;
+}
+.submit:hover, 
+.button:hover {
+    background: #2162a7;
+    color: white;
+}
+
+/* ==================== Main ==================== */
+#central{
+    width: 75%;
+    float: right;
+    border-left: 1px solid #ccc;
+    box-shadow: -5px -1px 5px #ddd;
+    background: white;
+    min-height: 500px;
+}
+#central h1{
+    font-size: 28px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding-bottom: 10px;
+    text-align: center;
+    border-bottom: 2px solid #ccc;
+}
+
+/* ==================== Products ==================== */
+.product{
+    width: 30%;
+    margin-left: 10px;
+    margin-right: 10px;
+    float: left;
+    border-right: 1px solid #ccc;
+    text-align: center;
+}
+.product h2{
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.product img{
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+/* ==================== Footer ==================== */
+#footer{
+    clear: both;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+    background: #222;
+}
+
+/* ==================== Alerts ==================== */
+.alert_green{
+    color: green;
+}
+.alert_red{
+    color: red;
+}
 
 @media only screen and (min-width: 1024px){
     #logo_img{
@@ -76,4 +254,25 @@ a:hover{
     #logo a{
         font-size: 3rem;
     }
+}
+
+/*================================= Category table =====================================*/
+#category_table{
+    width: 30%;
+    margin-left: 35%;
+    padding: 1rem;
+    text-align: center;
+}
+#category_table th{
+    color: white;
+    background: #22677e;
+}
+.category_btn{
+    width: 20%;
+    border-radius: 5px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+.category_btn:visited{
+    color: white;
 }
