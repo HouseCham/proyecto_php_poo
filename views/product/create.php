@@ -2,8 +2,8 @@
 
 <form action="<?= base_url ?>product/save" method="POST">
 
-    <label for="name">Name</label>
-    <input type="text" name="name" class="input" required />
+    <label for="product">Name</label>
+    <input type="text" name="product" class="input" required />
 
     <label for="description">Description</label>
     <textarea name="description" cols="30" class="input" rows="10"></textarea>
