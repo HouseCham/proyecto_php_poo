@@ -16,7 +16,6 @@ class productController{
 
     public function create(){
         Utils::isAdmin();
-
         require_once 'views/product/create.php';
     }
 
@@ -39,6 +38,21 @@ class productController{
                 $product->setStock($stock);
                 $product->setCategoryId($category);
 
+                // Save img
+                $file = $_FILES['image'];
+                $filename = $file['name'];
+                $mimetype = $file['type'];
+
+                if($mimetype == "image/jpg" || $mimetype == "image/jpeg" || $mimetype == "image/png"){
+                    if(!is_dir('uploads/images')){
+                        mkdir("uploads/images", 0777, true);
+                    }
+                    move_uploaded_file($file['tmp_name'], 'uploads/images/'.$filename);
+                    $product->setImage($filename);
+                } else{
+                    $_SESSION['product'] = "failed";
+                }
+
                 $save = $product->save();
 
                 if($save){
@@ -53,5 +67,28 @@ class productController{
             $_SESSION['product'] = "failed";
         }
         header("Location:".base_url."product/manage");
+    }
+
+    public function edit(){
+        Utils::isAdmin();
+    }
+
+    public function delete(){
+        Utils::isAdmin();
+
+        if(isset($_GET['id'])){
+            $product = new Product();
+            $product->setId($_GET['id']);
+            $delete = $product->delete();
+
+            if($delete){
+                $_SESSION['delete'] = "complete";
+            } else{
+                $_SESSION['delete'] = "failed";
+            }
+        } else{
+            $_SESSION['delete'] = "failed";
+        }
+        header('Location:'.base_url.'product/manage');
     }
 }

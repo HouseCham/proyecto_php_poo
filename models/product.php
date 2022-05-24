@@ -8,7 +8,7 @@ class Product{
     private $price;
     private $stock;
     private $sale;
-    private $image;
+    private $image = null;
     private $db;
 
     public function __construct(){
@@ -70,7 +70,7 @@ class Product{
         return $products;
     }
     public function save(){
-        $sql = "INSERT INTO products VALUES (NULL, '{$this->getCategoryId()}', '{$this->getProduct()}', '{$this->getDescripcion()}', '{$this->getPrice()}', '{$this->getStock()}', null, null);";
+        $sql = "INSERT INTO products VALUES (NULL, '{$this->getCategoryId()}', '{$this->getProduct()}', '{$this->getDescripcion()}', '{$this->getPrice()}', '{$this->getStock()}', null, '{$this->getImage()}');";
         $save = $this->db->query($sql);
 
         $result = false;
@@ -78,5 +78,15 @@ class Product{
             $result = true;
         }
         return $result;
+    }
+    public function delete(){
+        $sql = "DELETE FROM products WHERE id={$this->id};";
+        $delete = $this->db->query($sql);
+
+        if($delete){
+            return true;
+        } else{
+            return false;
+        }
     }
 }

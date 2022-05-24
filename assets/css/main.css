@@ -20,9 +20,11 @@ a{
     color: var(--a_color);
     text-decoration: none;
 }
+/*
 a:visited{
     color: var(--a_color);
 }
+*/
 a:hover{
     color: var(--a_hover);
 }
@@ -275,4 +277,16 @@ input[type="email"]:focus {
 }
 .category_btn:visited{
     color: white;
+}
+
+/*================================== Products manage =========================================*/
+.product_btn{
+    font-size: 10px;
+}
+.btn_yellow{
+    background: #808817;
+    color: white;
+}
+.btn_red{
+    background: #a72626;
 }
