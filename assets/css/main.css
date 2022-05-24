@@ -290,3 +290,9 @@ input[type="email"]:focus {
 .btn_red{
     background: #a72626;
 }
+
+/*================================== Edit image =========================================*/
+.thumb{
+    max-width: 100px;
+    margin-left: 4rem;
+}

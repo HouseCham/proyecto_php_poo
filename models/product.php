@@ -69,6 +69,10 @@ class Product{
         $products = $this->db->query("SELECT * FROM products ORDER BY id DESC;");
         return $products;
     }
+    public function getOne(){
+        $product = $this->db->query("SELECT * FROM products WHERE id={$this->getId()};");
+        return $product->fetch_object();
+    }
     public function save(){
         $sql = "INSERT INTO products VALUES (NULL, '{$this->getCategoryId()}', '{$this->getProduct()}', '{$this->getDescripcion()}', '{$this->getPrice()}', '{$this->getStock()}', null, '{$this->getImage()}');";
         $save = $this->db->query($sql);
@@ -79,6 +83,23 @@ class Product{
         }
         return $result;
     }
+
+    public function edit(){
+        $sql = "UPDATE products SET category_id='{$this->getCategoryId()}', product='{$this->getProduct()}', description='{$this->getDescripcion()}', price='{$this->getPrice()}', stock='{$this->getStock()}'";
+        if($this->getImage() != null){
+            $sql .= ", image='{$this->getImage()}'";
+        }
+        $sql .= " WHERE id={$this->getId()};";
+
+        $edit = $this->db->query($sql);
+
+        $result = false;
+        if($edit){
+            $result = true;
+        }
+        return $result;
+    }
+
     public function delete(){
         $sql = "DELETE FROM products WHERE id={$this->id};";
         $delete = $this->db->query($sql);
