@@ -94,7 +94,6 @@ class Product{
         }
         return $result;
     }
-
     public function edit(){
         $sql = "UPDATE products SET category_id='{$this->getCategoryId()}', product='{$this->getProduct()}', description='{$this->getDescripcion()}', price='{$this->getPrice()}', stock='{$this->getStock()}'";
         if($this->getImage() != null){

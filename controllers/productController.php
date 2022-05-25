@@ -117,4 +117,17 @@ class productController
         }
         header('Location:' . base_url . 'product/manage');
     }
+
+    public function view(){
+        if (isset($_GET['id'])) {
+            $product = new Product();
+            $product->setId($_GET['id']);
+            $oneProduct = $product->getOne();
+        } else {
+            $_SESSION['edit'] = "failed";
+            header('Location:' . base_url);
+        }
+
+        require_once 'views/product/view.php';
+    }
 }

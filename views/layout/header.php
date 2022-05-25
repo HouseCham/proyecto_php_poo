@@ -29,7 +29,7 @@
                 </li>
                 <?php while ($cat = $categories->fetch_object()) : ?>
                     <li>
-                        <a href="<?=base_url?>category/view&category=<?=$cat->id?>"><?= $cat->category ?></a>
+                        <a href="<?= base_url ?>category/view&category=<?= $cat->id ?>"><?= $cat->category ?></a>
                     </li>
                 <?php endwhile; ?>
             </ul>

@@ -5,13 +5,15 @@
     <?php else : ?>
         <?php while ($product = $products->fetch_object()) : ?>
             <div class="product">
-                <?php if ($product->image != null) : ?>
-                    <img src="<?= base_url ?>uploads/images/<?= $product->image ?>" alt="" class="product_img">
-                <?php else : ?>
-                    <!-- default image -->
-                <?php endif; ?>
-                <h2><?= $product->product ?></h2>
-                <p><?= $product->price ?></p>
+                <a href="<?= base_url ?>product/view&id=<?= $product->id ?>">
+                    <?php if ($product->image != null) : ?>
+                        <img src="<?= base_url ?>uploads/images/<?= $product->image ?>" alt="" class="product_img">
+                    <?php else : ?>
+                        <!-- default image -->
+                    <?php endif; ?>
+                    <h2><?= $product->product ?></h2>
+                    <p><?= $product->price ?></p>
+                </a>
                 <a href="#" class="button">Buy</a>
             </div>
         <?php endwhile; ?>

@@ -296,3 +296,17 @@ input[type="email"]:focus {
     max-width: 100px;
     margin-left: 4rem;
 }
+
+#single_product img{
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+#single_product p{
+    margin-left: 3rem;
+    text-align: justify;
+}
+#single_product span{
+    margin-left: 3rem;
+}
