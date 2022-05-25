@@ -6,6 +6,6 @@
             <h2><?= $product->product ?></h2>
             <p><?= $product->price ?></p>
         </a>
-        <a href="#" class="button">Buy</a>
+        <a href="<?=base_url?>car/add&id=<?=$product->id?>" class="button">Buy</a>
     </div>
 <?php endwhile; ?>
