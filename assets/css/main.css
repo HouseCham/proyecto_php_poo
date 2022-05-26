@@ -20,9 +20,11 @@ a{
     color: var(--a_color);
     text-decoration: none;
 }
+/*
 a:visited{
     color: var(--a_color);
 }
+*/
 a:hover{
     color: var(--a_hover);
 }
@@ -275,4 +277,41 @@ input[type="email"]:focus {
 }
 .category_btn:visited{
     color: white;
+}
+
+/*================================== Products manage =========================================*/
+.product_btn{
+    font-size: 10px;
+}
+.btn_yellow{
+    background: #808817;
+    color: white;
+}
+.btn_red{
+    background: #a72626;
+}
+
+/*================================== Edit image =========================================*/
+.thumb{
+    max-width: 100px;
+    margin-left: 4rem;
+}
+
+#single_product img{
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+#single_product p{
+    margin-left: 3rem;
+    text-align: justify;
+}
+#single_product span{
+    margin-left: 3rem;
+}
+
+/*================================== Cart =========================================*/
+.cart_img{
+    width: 50px;
 }
