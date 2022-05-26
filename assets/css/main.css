@@ -310,3 +310,8 @@ input[type="email"]:focus {
 #single_product span{
     margin-left: 3rem;
 }
+
+/*================================== Cart =========================================*/
+.cart_img{
+    width: 50px;
+}

@@ -4,7 +4,9 @@ require_once 'models/product.php';
 class carController{
     public function index(){
         if(isset($_SESSION['car'])){
-            var_dump($_SESSION['car']);
+            $cart = $_SESSION['car'];
+            //var_dump($cart);
+            //die();
             require_once 'views/car/index.php';
         }
     }
